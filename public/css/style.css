@@ -1,0 +1,78 @@
+body{
+    padding: 30px;
+    background-color: #dff9fb;
+}
+
+h1{
+    font-family: sans-serif;
+    color: #30336b;
+    text-align: center;
+}
+
+h2{
+    font-family: sans-serif;
+    color: gray;
+    text-align: center;
+}
+
+h3{
+    font-family: sans-serif;
+    color: rgb(80, 78, 78);
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    color: rgb(80, 78, 78);
+}
+
+.div-atalhos{
+    height: 50px;
+    display: block;
+    font-family: sans-serif;
+    font-size: 1.3em;
+    text-align: right;
+    margin-right: 5%;
+}
+
+a{
+
+    color: gray;
+    letter-spacing: 10px;
+    font-size: 28px;
+    text-decoration: none;
+    transition: linear 0.4s color;
+}
+
+a:hover{
+    color: #f0932b;
+}
+
+section{
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 10%;
+    width: 300px;
+}
+
+img{
+    width: 300px;
+}
+
+footer{
+    margin-top: 14%;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: sans-serif;
+}
+ul{
+    margin-top: 5px;
+    list-style-type: none;
+    margin: auto;
+    text-align: center;
+    width: 50%;
+}
+li{
+    margin-top: 10px;
+}

@@ -1,0 +1,17 @@
+
+Cria um repositorio vazio onde é armazenado os arquivos:
+Iniciar o git  = git init
+
+Visualiza o status dos arquivos:
+Satatus dos arquivos - git status
+
+Lista os arquivos a qual não queremos rastrear ou controlar a versão
+Ignora os arquvos - .gitignore
+
+Adiciona os arquivos na base de preparação, na frente o nome do arquivo ou diretorio:
+adiciona os arquivos - git add
+adiciona todos os arquivos - git add .
+
+No visual estudio code vai em Setting - em file:exclude mude o nome do .git para poder visualizar a pasta
+
+

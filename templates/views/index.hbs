@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Weather Main</title>
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link rel='stylesheet'  href='css/style.css'>
+        
+        <style>
+            footer{
+                margin-top: 8%;
+            }
+            section{
+                padding: 1px;
+                width: 50%;
+                background: #c7ecee;
+                border-radius: 15px;
+                margin-top: 10%;
+            }
+            form{
+                padding: 20px;
+            }
+            h3{
+                color: #30336b;
+            }
+            input{
+                border-radius: 10px;
+                width: 95%;
+                margin-bottom: 10px;
+            }
+            button{
+                margin-left: 2px;
+                color: #30336b;
+                border-radius: 10px;
+                transition: linear 0.5s background;
+            }
+            button:hover{
+                background: #c7ecee;
+            }
+        </style>
+        
+    </head>
+
+    <body>
+        {{>header}}
+        
+        <section>
+        <h3>Use this site to get your weather! </h2>
+        <form class="form-first"> <input type="text" placeholder="Insert your location" autofocus> <button class="btn-send">Find my weather</button> </form>
+
+        </section>
+
+        <a class="message-error"></a>
+
+        <ul>
+        </ul>
+
+        {{>footer}}
+
+        <script src='js/index.js'></script>
+    </body>
+
+</html>
