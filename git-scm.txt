@@ -12,6 +12,10 @@ Adiciona os arquivos na base de preparação, na frente o nome do arquivo ou dir
 adiciona os arquivos - git add
 adiciona todos os arquivos - git add .
 
+Commita os arquivos no final colocar descrisão da atualização -m "Init commit":
+Commita os arquivos = git commit -m "Descrição da modificação"
+
+Descomita o arquivo cazo aja erro:
+Descomita e apaga a ultima atualização - git checkout -- arquivo.txt
+
 No visual estudio code vai em Setting - em file:exclude mude o nome do .git para poder visualizar a pasta
-
-
