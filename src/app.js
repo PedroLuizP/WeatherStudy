@@ -27,16 +27,16 @@ const publicPath = path.join(__dirname, '../public')
 const viewspath = path.join(__dirname, '../templates/views');
 const partialpath = path.join(__dirname, '../templates/partials');
 
-//Renderiza paginas interativas Pode-se usar o EJS ou no casso desse curso Handlebarsjs (Se comportam como htm)
+//Renderiza páginas interativas. Pode-se usar o EJS ou no casso desse curso Handlebarsjs (Se comportam como htm)
 app.set('view engine', 'hbs');
 
-//Passando o caminho aonde se encontra os arquivos HBS
+//Passando o caminho a onde se encontra os arquivos HBS
 app.set('views', viewspath);
 
-//Arquivos parciais, footer head - Arquivos que podem estar em varias paginas estáticos.
+//Arquivos parciais, footer head - Arquivos que podem estar em varias paginas - estáticos.
 hbs.registerPartials(partialpath);
 
-//Rendeniriza as páginas html na tela do navegador exemplo (localhost:3000about.html)
+//Renderiza as páginas html na tela do navegador exemplo (localhost:3000about.html)
 app.use(express.static(publicPath))
 
 app.get('', (req, res) => {
@@ -77,7 +77,7 @@ app.get('/weather', function (req, res) {
 //Query é o canal aonde obtem as informaçãoes passadas pela url (http://localhost:3000/products?search=games&rating=5)
 app.get('/products', (req, res) => {
 
-    //Sen na url não tiver search ou se search estiver vazia, ira ezecutar o codigo abaixo
+    //Se na url não tiver search ou se search estiver vazia, ira ezecutar o codigo abaixo
     if (!req.query.search) {
         return res.render('404', {
             title: `Not Found Page ${req.query.search}`,
