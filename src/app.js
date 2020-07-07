@@ -1,42 +1,21 @@
-
-/*
-
-Documentação
-express = http://expressjs.com/en/4x/api.html#app.get
-hbs = https://handlebarsjs.com/guide/
-
-Rotas
-app.com
-app.com/help
-app.com/about
-
-get = Determina o que deve ser feito quando a rota for socilitada
-
-app.set('views', viewspath) = ikjPersonaliza o caminha onde vai estar os arquivos hbs
-
-*/
-
 const express = require('express');
 const path = require('path');
 const chalk = require('chalk');
 const hbs = require('hbs');
 const app = express();
 const geocode = require("../src/utils/geocode");
+const port = process.env.PORT || 3000
 
 const publicPath = path.join(__dirname, '../public')
 const viewspath = path.join(__dirname, '../templates/views');
 const partialpath = path.join(__dirname, '../templates/partials');
 
-//Renderiza paginas interativas Pode-se usar o EJS ou no casso desse curso Handlebarsjs (Se comportam como htm)
 app.set('view engine', 'hbs');
 
-//Passando o caminho aonde se encontra os arquivos HBS
 app.set('views', viewspath);
 
-//Arquivos parciais, footer head - Arquivos que podem estar em varias paginas estáticos.
 hbs.registerPartials(partialpath);
 
-//Rendeniriza as páginas html na tela do navegador exemplo (localhost:3000about.html)
 app.use(express.static(publicPath))
 
 app.get('', (req, res) => {
@@ -74,10 +53,8 @@ app.get('/weather', function (req, res) {
 
 });
 
-//Query é o canal aonde obtem as informaçãoes passadas pela url (http://localhost:3000/products?search=games&rating=5)
 app.get('/products', (req, res) => {
 
-    //Sen na url não tiver search ou se search estiver vazia, ira ezecutar o codigo abaixo
     if (!req.query.search) {
         return res.render('404', {
             title: `Not Found Page ${req.query.search}`,
@@ -105,7 +82,6 @@ app.get('/help', (req, res) => {
     });
 });
 
-// * = Coringa todas as páginas que não forem carregadas
 app.get('*', (req, res) => {
     return res.render('404', {
         title: 'Not Found Page',
@@ -138,6 +114,6 @@ app.get('/index/*', (req, res) => {
     });
 });
 
-app.listen('3000', () => {
-    console.log(chalk.green.inverse('Server in up on port 3000.'))
+app.listen(port, () => {
+    console.log(chalk.green.inverse(`Server in up on port ${port}`))
 });

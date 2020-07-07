@@ -47,7 +47,7 @@ form.addEventListener('submit', async function (e) {
 });
 
 function processing(city, callback) {
-    const data = fetch(`http://localhost:3000/weather?address=${city}`).then((response) => {
+    const data = fetch(`/weather?address=${city}`).then((response) => {
         response.json().then((data) => {
             return callback(data);
         })
