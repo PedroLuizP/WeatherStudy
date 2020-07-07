@@ -1,6 +1,5 @@
 
 const http = require('http');
-require('dotenv').config()
 
 function weather(city, lat, lan, callback) {
 
