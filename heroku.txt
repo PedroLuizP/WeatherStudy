@@ -1,9 +1,0 @@
-
-documentação do git para controle de versão = https://git-scm.com/doc
-
-https://dashboard.heroku.com/apps
-Senha = Pedro!9212
-
-                ---comandos---
-                heroku -v = versão
-                heroku login = loga
