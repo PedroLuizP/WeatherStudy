@@ -3,7 +3,7 @@ const http = require('http');
 
 function weather(city, lat, lan, callback) {
 
-    const url = process.env.CONNECTIONWEATHER;
+    const url = `http://api.weatherstack.com/current?access_key=ca904569eee789d48e77ae21ba1d37b4&query=${lat},${lan}&units=m`;
     const cidade = city;
 
     const request = http.request(url, (response) => {
