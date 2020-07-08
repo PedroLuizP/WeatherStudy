@@ -11,12 +11,11 @@ const viewspath = path.join(__dirname, '../templates/views');
 const partialpath = path.join(__dirname, '../templates/partials');
 
 app.set('view engine', 'hbs');
-
 app.set('views', viewspath);
-
-hbs.registerPartials(partialpath);
-
+app.set('view engine', 'hbs');
+app.set('views', viewspath);
 app.use(express.static(publicPath))
+hbs.registerPartials(partialpath);
 
 app.get('', (req, res) => {
 
